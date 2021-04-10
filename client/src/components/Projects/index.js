@@ -1,7 +1,11 @@
+import MainDisplay from './MainDisplay';
+import Sidebar from './Sidebar';
+
 function Projects() {
   return(
     <div className="container-max">
-      Projects Page
+      <Sidebar />
+      <MainDisplay />
     </div>
   )
 }
