@@ -5,6 +5,8 @@
 #client
 /client/node_modules
 /client/README.md
+/client/package.json
+/client/package-lock.json
 
 # misc
 .DS_Store
