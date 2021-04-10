@@ -1,0 +1,14 @@
+# env
+/node_modules
+/vscode
+
+#client
+/client/node_modules
+/client/README.md
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

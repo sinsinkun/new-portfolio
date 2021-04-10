@@ -1,0 +1,14 @@
+{
+  "name": "mern-portfolio",
+  "version": "0.0.1",
+  "description": "MERN Stack Example Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JC X",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
