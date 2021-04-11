@@ -5,23 +5,34 @@ function Navbar() {
   
   const [store] = useStoreContext();
 
-  return(
+  if (store.winX > 980) return(
     <div className="navbar">
       <span>JingChang Xiao</span>
       <div className="navbar-mid"></div>
-      {store.winX > 980 ? 
       <div className="navbar-nav">
-        <NavLink exact to="/" activeClassName="active" className="navbar-navlinks">HOME</NavLink>
-        <NavLink to="/demos" activeClassName="active" className="navbar-navlinks">DEMOS</NavLink>
-        <NavLink to="/projects" activeClassName="active" className="navbar-navlinks">PROJECTS</NavLink>
-        <NavLink to="/about" activeClassName="active" className="navbar-navlinks">ABOUT ME</NavLink>
-      </div> : 
-      <div className="navbar-nav">
-        NAVIGATION &gt;&gt;
+        <NavLink exact to="/" activeClassName="active" className="navlinks">HOME</NavLink>
+        <NavLink to="/demos" activeClassName="active" className="navlinks">DEMOS</NavLink>
+        <NavLink to="/projects" activeClassName="active" className="navlinks">PROJECTS</NavLink>
+        <NavLink to="/about" activeClassName="active" className="navlinks">ABOUT ME</NavLink>
       </div>
-    }
-      
     </div>
+  )
+  else return(
+    <>
+      <div className="navbar">
+        <span>JingChang Xiao</span>
+        <div className="navbar-mid"></div>
+        <div className="navbar-nav">
+          NAVIGATION &gt;&gt;
+        </div>
+      </div>
+      <div className="nav-side hidden">
+        <NavLink exact to="/" activeClassName="active" className="navlinks">HOME</NavLink>
+        <NavLink to="/demos" activeClassName="active" className="navlinks">DEMOS</NavLink>
+        <NavLink to="/projects" activeClassName="active" className="navlinks">PROJECTS</NavLink>
+        <NavLink to="/about" activeClassName="active" className="navlinks">ABOUT ME</NavLink>
+      </div>
+    </>
   )
 }
 

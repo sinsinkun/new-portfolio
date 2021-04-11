@@ -12,7 +12,7 @@ function Sidebar() {
 
   if (store.winX > 980) return(
     <div className="sidebar">
-      <h3 className="sidebar-title">Demos</h3>
+      <h2 className="sidebar-title">Demos</h2>
       <input className="sidebar-search" placeholder="Search" />
       <ul className="sidebar-btn-list">
         <li><button onClick={() => goToDemo("popout")}>Popout tabs</button></li>

@@ -1,7 +1,9 @@
 function MainDisplay() {
   return(
     <div className="projects-main">
-      <span>Demos page</span>
+      <div className="center">
+        <span>Coming soon...</span>
+      </div>
     </div>
   )
 }
