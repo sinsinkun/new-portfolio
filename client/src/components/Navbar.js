@@ -6,10 +6,17 @@ function Navbar() {
   
   const [store] = useStoreContext();
   const navSide = useRef(null);
+  const invisBg = useRef(null);
 
   function openNavSide() {
-    if (navSide.current.classList.contains("hidden")) navSide.current.classList.remove("hidden");
-    else navSide.current.classList.add("hidden");
+    if (navSide.current.classList.contains("hidden")) {
+      navSide.current.classList.remove("hidden");
+      invisBg.current.classList.remove("hidden");
+    }
+    else {
+      navSide.current.classList.add("hidden");
+      invisBg.current.classList.add("hidden");
+    }
   }
 
   if (store.winX > 980) return(
@@ -30,7 +37,9 @@ function Navbar() {
         <span>JingChang Xiao</span>
         <div className="navbar-mid"></div>
         <div className="navbar-nav">
-          <button className="navlinks" onClick={openNavSide}>NAVIGATION &gt;&gt;</button>
+          <button className="navlinks" onClick={openNavSide}>
+            <div className="hamburger"></div>
+          </button>
         </div>
       </div>
       <div className="nav-side hidden" ref={navSide} onClick={openNavSide}>
@@ -39,6 +48,7 @@ function Navbar() {
         <NavLink to="/projects" activeClassName="active" className="navlinks">PROJECTS</NavLink>
         <NavLink to="/about" activeClassName="active" className="navlinks">ABOUT ME</NavLink>
       </div>
+      <div className="invis-bg hidden" ref={invisBg} onClick={openNavSide}></div>
     </>
   )
 }

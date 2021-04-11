@@ -81,6 +81,35 @@ li {
   display: none !important;
 }
 
+.invis-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+}
+
+.hamburger {
+  width: 30px;
+  height: 4rem;
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  position: relative;
+  text-indent: 101%;
+  overflow: hidden;
+}
+.hamburger::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  width: 25px;
+  height: 2.2px;
+  box-shadow: 0 1.5rem 0 white, 0 2rem 0 white, 0 2.5rem 0 white;
+}
 /* ---------------- */
 /* -- NAVBAR CSS -- */
 /* ---------------- */
@@ -187,6 +216,7 @@ li {
   max-width: 350px;
   padding: 0.5rem;
   overflow-y: overlay;
+  z-index: 7;
 }
 
 .sidebar.closed {

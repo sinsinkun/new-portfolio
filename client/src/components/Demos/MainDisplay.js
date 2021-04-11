@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 function MainDisplay() {
 
   const loc = useLocation();
-  const [demo, setDemo] = useState();
+  const [demo, setDemo] = useState("none");
 
   useEffect(() => {
     let newDemo = loc.pathname.replace("/demos/","");
@@ -15,7 +15,8 @@ function MainDisplay() {
   return(
     <div className="projects-main">
       <div className="center">
-        <span>Current demo: {demo}</span>
+        {demo==="none" ? <span>Demos page still in progress</span> : ""}
+        {demo!=="none" ? <span>{demo} demo coming soon...</span> : ""}
       </div>
     </div>
   )

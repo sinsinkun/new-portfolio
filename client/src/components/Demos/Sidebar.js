@@ -7,14 +7,21 @@ function Sidebar() {
   const history = useHistory();
   const [store] = useStoreContext();
   const sideDiv = useRef(null);
+  const invisBg = useRef(null);
 
   function goToDemo(demo) {
     history.push("/demos/" + demo);
   }
 
   function toggleSidebar() {
-    if (sideDiv.current.classList.contains("hidden")) sideDiv.current.classList.remove("hidden");
-    else sideDiv.current.classList.add("hidden");
+    if (sideDiv.current.classList.contains("hidden")) {
+      sideDiv.current.classList.remove("hidden");
+      invisBg.current.classList.remove("hidden");
+    }
+    else {
+      sideDiv.current.classList.add("hidden");
+      invisBg.current.classList.add("hidden");
+    }
   }
 
   if (store.winX > 980) return(
@@ -31,7 +38,7 @@ function Sidebar() {
   else return(
     <>
     <div className="sidebar closed" onClick={toggleSidebar} >
-      &gt;&gt;
+    ❯❯
     </div>
     <div className="sidebar open hidden" ref={sideDiv} onClick={toggleSidebar}>
       <h2 className="sidebar-title">Demos</h2>
@@ -42,6 +49,7 @@ function Sidebar() {
         <li><button onClick={() => goToDemo("dragdrop")}>Drag and drop</button></li>
       </ul>
     </div>
+    <div className="invis-bg hidden" ref={invisBg} onClick={toggleSidebar}></div>
     </>
   )
 }
