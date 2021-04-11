@@ -37,7 +37,7 @@ function Projects() {
       <div style={{width:"80%"}}>
         <h1>Projects page</h1>
         {projects.map(
-          project => <ProjectEntry name={project.name} link={project.link} 
+          project => <ProjectEntry name={project.name} link={project.link} key={project.name}
             image={project.image} gitLink={project.gitLink} description={project.description} />
         )}
       </div>

@@ -22,8 +22,8 @@ function Home() {
         </p>
         <p>
           Server based functionality for this website is also supported with a NodeJS server, 
-          utilizing an interface built on ExpressJS and using a MongoDB database to save data.
-          That means this website is a fully functional MERN stack project.
+          utilizing an interface built on ExpressJS and using a MongoDB database to save data, 
+          making this website a fully functional MERN stack project.
         </p>
         <p>
           With all that said, feel free to look around, and take a look at my Github if you 
