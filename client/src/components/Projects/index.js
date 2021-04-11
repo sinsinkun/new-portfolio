@@ -34,7 +34,7 @@ const projects = [
 function Projects() {
   return(
     <div className="container">
-      <div style={{ width:"80%"}}>
+      <div style={{width:"80%"}}>
         <h1>Projects page</h1>
         {projects.map(
           project => <ProjectEntry name={project.name} link={project.link} 
