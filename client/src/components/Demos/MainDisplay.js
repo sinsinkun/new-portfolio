@@ -1,7 +1,7 @@
 function MainDisplay() {
   return(
     <div className="projects-main">
-      <span>Projects page</span>
+      <span>Demos page</span>
     </div>
   )
 }

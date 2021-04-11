@@ -1,7 +1,9 @@
 function About() {
   return(
-    <div className="container">
-      About page
+    <div className="container-max">
+      <div className="container">
+        <p>About page</p>
+      </div>
     </div>
   )
 }

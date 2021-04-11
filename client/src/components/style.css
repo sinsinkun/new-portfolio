@@ -1,22 +1,55 @@
 body {
-  background-color: rgb(39, 39, 46);
+  /* background-color: rgb(39, 39, 46); */
+  background:
+    radial-gradient(rgb(93, 93, 105) 3px, transparent 4px),
+    radial-gradient(rgb(60, 59, 63) 3px, transparent 4px),
+    linear-gradient(rgb(45, 44, 48) 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, 
+      #58595f 75px, #58595f 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, 
+    #58595f 76px, #58595f 77px, transparent 78px, transparent 109px),
+    rgb(45, 44, 48);
+  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   margin: 0;
+  min-width: 350px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(255,255,255,0.05);
+  background-clip: padding-box;
+  border-right: 5px solid transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(135, 182, 209, 0.2);
+  background-clip: padding-box;
+  border-right: 5px solid transparent;
+}
+::-webkit-scrollbar-button {
+  width: 8px;
+  height: 8px;
 }
 
 .container-max {
-  min-height: calc(100vh - 4rem);
+  height: calc(100vh - 4rem);
   display: flex;
+  overflow-y: overlay;
 }
 
 .container {
   margin: 0 12vw;
   min-height: calc(100vh - 4rem);
+  height: max-content;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255,255,255,0.02);
+  background-color: rgb(39, 39, 43);
 }
 
 /* ---------------- */
@@ -61,10 +94,11 @@ body {
 /* ----------------------- */
 .sidebar {
   background-color: rgb(52, 52, 66);
-  height: inherit;
+  height: calc(100vh - 4rem - 16px);
   width: 25%;
   max-width: 400px;
   padding: 0.5rem;
+  overflow-y: overlay;
 }
 
 .sidebar.closed {
@@ -103,7 +137,7 @@ body {
   border-bottom: 1px solid rgba(255,255,255,0.1);
   color: white;
   cursor: pointer;
-  padding: 0.5rem 0;
+  padding: 0.7rem 0;
   width: 100%;
 }
 
@@ -117,8 +151,11 @@ body {
 }
 
 .projects-main {
+  background-color: rgb(39, 39, 43);
   padding: 0.5rem;
   flex-grow: 1;
+  height: calc(100vh - 4rem - 16px);
+  overflow-y: overlay;
 }
 
 /* ------------------- */
